@@ -2,14 +2,7 @@ package problem9;
 
 public class Entry {
 	public static void ShowUI(Account account) {
-		Dialog dlg=null;
-		
-		if(account instanceof SA) {
-			dlg = new SADialog();
-		}
-		if(account instanceof CA) {
-			dlg = new CADialog();
-		}
+		Dialog dlg= account.getDialog();
 		if(dlg!=null) {
 			dlg.Display();			
 		}
